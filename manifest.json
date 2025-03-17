@@ -1,14 +1,16 @@
 {
-  "name": "Panic Button Add-in",
-  "version": "1.0.0",
-  "supportEmail": "soporte@tudominio.com",
-  "icon": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/icon.png",
-  "permissions": [],
-  "pages": [
-    {
-      "name": "Panic Button",
-      "url": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/index.html",
-      "icon": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/icon.png"
-    }
-  ]
+    "name": "geotab-panic-button-addin",
+    "supportEmail": "sebastian.quiroz@telefonica.com",
+    "version": "1.0",
+    "items": [
+        {
+            "url": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/index.html",
+            "path": "AdministrationLink/",
+            "menuName": {
+                "en": "Botón de Pánico"
+            },
+            "icon": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/icon.png"
+        }
+    ],
+    "isSigned": false
 }
