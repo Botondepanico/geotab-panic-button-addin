@@ -1,0 +1,14 @@
+{
+  "name": "Panic Button Add-in",
+  "version": "1.0.0",
+  "supportEmail": "soporte@tudominio.com",
+  "icon": "https://tudominio.com/ruta/al/icono.png",
+  "permissions": [],
+  "pages": [
+    {
+      "name": "Panic Button",
+      "url": "https://tudominio.com/ruta/al/index.html",
+      "icon": "https://tudominio.com/ruta/al/icono.png"
+    }
+  ]
+}
