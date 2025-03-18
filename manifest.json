@@ -5,7 +5,7 @@
     "items": [
         {
             "url": "https://botondepanico.github.io/geotab-panic-button-addin/index.html",
-            "path": "AdministrationLink/",
+            "path": "Home/",
             "menuName": {
                 "en": "Botón de Pánico"
             },
