@@ -1,20 +1,16 @@
 geotab.addin.panicButton = function(api, state) {
     let monitorActive = false;
-
-    // Configuración del sonido
+    const ruleId = "ayea8WF-hs0-qbkVvGb7FBw"; // ID de la regla en Geotab
     const mp3Url = 'https://botondepanico.github.io/geotab-panic-button-addin/alerta.mp3';
     const sound = new Audio(mp3Url);
 
-    // Función para iniciar la monitorización
+    // Iniciar la monitorización automáticamente
     function startMonitoring() {
-        if (monitorActive) return;
+        if (monitorActive) return; // Evitar múltiples ejecuciones
         monitorActive = true;
-
-        const ruleId = "ayea8WF-hs0-qbkVvGb7FBw"; // ID de la regla en Geotab
 
         async function checkPanicButtonRule() {
             try {
-                // Buscar eventos en el último minuto
                 const response = await api.call("Get", {
                     typeName: "ExceptionEvent",
                     search: {
@@ -33,7 +29,7 @@ geotab.addin.panicButton = function(api, state) {
             } catch (error) {
                 console.error("Error en monitoreo:", error);
             } finally {
-                setTimeout(checkPanicButtonRule, 10000);
+                setTimeout(checkPanicButtonRule, 10000); // Verificar cada 10 segundos
             }
         }
 
@@ -44,10 +40,10 @@ geotab.addin.panicButton = function(api, state) {
     function triggerAlert() {
         updateStatus("¡Alerta de botón de pánico activada!", "red");
 
-        // Iniciar sonido con interacción del usuario
+        // Iniciar sonido con interacción del usuario si es necesario
         document.body.addEventListener("click", () => sound.play(), { once: true });
 
-        // Reproducir sonido si ya hay interacción previa
+        // Intentar reproducir el sonido inmediatamente
         sound.play().catch(err => console.error("No se pudo reproducir alerta", err));
     }
 
@@ -60,7 +56,7 @@ geotab.addin.panicButton = function(api, state) {
         }
     }
 
-    // Iniciar la monitorización cuando se cargue el add-in
+    // Se ejecuta al abrir el add-in (inicio automático)
     state.setState({ isActive: true });
     startMonitoring();
 };
