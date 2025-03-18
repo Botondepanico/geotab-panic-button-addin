@@ -4,12 +4,12 @@
     "version": "1.0",
     "items": [
         {
-            "url": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/index.html",
+            "url": "https://botondepanico.github.io/geotab-panic-button-addin/index.html",
             "path": "AdministrationLink/",
             "menuName": {
                 "en": "Botón de Pánico"
             },
-            "icon": "https://github.com/Botondepanico/geotab-panic-button-addin/blob/master/icon.png"
+            "icon": "https://botondepanico.github.io/geotab-panic-button-addin/icon.png"
         }
     ],
     "isSigned": false
